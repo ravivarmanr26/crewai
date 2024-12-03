@@ -1,54 +1,140 @@
-# Project3 Crew
+#Job Assistance AI Agents
+This project aims to develop two AI agents, JobScout and InterviewAce, designed to help users secure job offers by providing comprehensive support throughout the job search and interview preparation process.
 
-Welcome to the Project3 Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Agent Names and Roles
+1. JobScout
+Role: Job and Company Researcher
 
-## Installation
+Tasks:
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+Job and Company Research:
 
-First, if you haven't already, install uv:
+Search for detailed information about the job role and company.
 
-```bash
-pip install uv
-```
+Explore websites like Glassdoor, AmbitionBox, Naukri, LinkedIn, Indeed, etc.
 
-Next, navigate to your project directory and install the dependencies:
+Gather data on:
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+Company culture
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+Ratings and reviews
 
-- Modify `src/project3/config/agents.yaml` to define your agents
-- Modify `src/project3/config/tasks.yaml` to define your tasks
-- Modify `src/project3/crew.py` to add your own logic, tools and specific args
-- Modify `src/project3/main.py` to add custom inputs for your agents and tasks
+Office timings
 
-## Running the Project
+Salary information
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+Employee responsibilities
 
-```bash
-$ crewai run
-```
+Interview Process Insight:
 
-This command initializes the project3 Crew, assembling the agents and assigning them tasks as defined in your configuration.
+Research the interview process for the specified company.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+Use platforms such as Glassdoor, AmbitionBox, Naukri, LinkedIn to gather information on interview stages and typical questions.
 
-## Understanding Your Crew
+2. InterviewAce
+Role: Interview Preparation Assistant
 
-The project3 Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+Tasks:
 
-## Support
+Interview Preparation:
 
-For support, questions, or feedback regarding the Project3 Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+Guide the user through preparation for each round of the interview process.
 
-Let's create wonders together with the power and simplicity of crewAI.
+Compile previous interview questions and experiences from platforms like Glassdoor, Naukri, LinkedIn, AmbitionBox, InterviewBit, Indeed, and other relevant sources.
+
+Detailed Guidance:
+
+Provide information and tips for each interview stage.
+
+Create a set of expected interview questions for each round based on gathered data.
+
+Offer personalized advice and strategies for preparation based on the job role and company-specific information.
+
+Workflow
+Input:
+
+User provides the job role and company name.
+
+JobScout:
+
+Conducts thorough research on the job role and company.
+
+Compiles and presents information on company culture, ratings, office timings, salary, job responsibilities, and interview process.
+
+Output from JobScout:
+
+Job offer details (job description, responsibilities, salary, etc.).
+
+Company information (culture, rating, office timing, etc.).
+
+Interview process details (rounds, expected questions, etc.).
+
+Selection:
+
+User selects a job offer and decides to prepare for the interview.
+
+InterviewAce:
+
+Guides the user through interview preparation for each stage.
+
+Searches for previous interview questions and experiences.
+
+Generates a context about the company and job role.
+
+Prepares a set of expected interview questions for each round.
+
+Output from InterviewAce:
+
+Expected interview questions for each round.
+
+Guidance on how to answer common interview questions.
+
+Practice interview questions and answers.
+
+Preparation:
+
+User practices and prepares for each round of the interview with the help of InterviewAce.
+
+Result:
+
+User feels confident and prepared for the interview.
+
+Benefits
+Comprehensive Support: From job search to interview preparation, users receive end-to-end assistance.
+
+Thorough Research: Detailed insights into company culture, job responsibilities, and interview processes.
+
+Effective Preparation: Personalized guidance and practice questions to help users ace their interviews.
+
+Running the Project
+Prerequisites
+Python 3.8 or higher
+
+Required Python packages listed in requirements.txt
+
+Installation
+Clone the repository:
+
+git clone https://github.com/ravivarmanr26/crewai.git
+cd crewai/project3
+Install the required packages:
+
+pip install -r requirements.txt
+Set up environment variables:
+
+Create a .env file and add any necessary environment variables.
+
+Usage
+To run the Job Assistance AI Agents, you can use the following command:
+
+bash
+python main.py
+To train the agents with specified iterations, use:
+
+bash
+python main.py train <number_of_iterations>
+License
+This project is licensed under the MIT License.
+
+This README file provides a comprehensive overview of the project, including the roles and tasks of each agent, the workflow, benefits, installation instructions, and usage. Feel free to modify it based on any additional requirements or information specific to your project.
+

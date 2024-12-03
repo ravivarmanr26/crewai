@@ -1,0 +1,25 @@
+research_job_company:
+  description: >
+    Conduct thorough research about the job role and company.
+    Make sure you find any interesting and relevant information given the current year is 2024.
+    Gather details on the company's culture, ratings, office timings, salary, and job responsibilities.
+  expected_output: >
+    A complete report on the company, including their culture, rating, office timings, salary, and job responsibilities.
+  agent: job_scout
+
+research_interview_process:
+  description: >
+    Understand the interview process for the company.
+    Review any provided materials and gather additional information as needed.
+    Use platforms such as Glassdoor, AmbitionBox, Naukri, LinkedIn, and others.
+  expected_output: >
+    A detailed summary of the interview process, including stages and expected questions.
+  agent: job_scout
+
+prepare_interview_guidance:
+  description: >
+    Provide detailed guidance for preparing for each round of the interview.
+    Use the information from the interview process research to generate expected interview questions and tips.
+  expected_output: >
+    An interview preparation guide with expected questions and detailed guidance for each interview stage.
+  agent: interview_ace
